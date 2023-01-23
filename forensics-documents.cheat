@@ -57,10 +57,13 @@ binwalk -D='.*' <filename> | tee binwalk.out
 pdf-parser <filename> | tee pdfparser.out
 
 
-# default to this for forsics on a file
+# default to this for forensics on a file
 strings <file>
 steghide extract -sf <file>
 stegseek <file>
 exiftool <file>
 binwalk <file>
 stegseek <file>
+java -jar StegSolve.jar <file>
+zsteg -a <file>
+foremost <file>

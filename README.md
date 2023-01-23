@@ -1,7 +1,8 @@
+# Final Result : 
+![](sheets.png)
 
-# A directory of cheat sheets to use with TLDR, cheat.sh, or Navi.
 
-## Installing
+## Installation:
 
 1. Install `fd-find fzf` if you don't have them:
 
@@ -65,5 +66,4 @@ You should restart your shell session. Now when you press `ctrl+g` and you shoul
 
     `$ navi` or ... press `ctrl+g` if you installed the widget...!!!
 
-# Final Result : 
-![](sheets.png)
+

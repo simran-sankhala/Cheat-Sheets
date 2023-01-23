@@ -71,3 +71,6 @@ volatility2 -f <dump-location> --profile=$(cat .active-profile.txt) iehistory | 
 
 # volatility2 Do a file scan for interesting files in the memdump
 volatility2 -f <dump-location> --profile=$(cat .active-profile.txt) filescan | tee -a filescan.out
+
+# volatility2 get screenshot from a memdump
+volatility2 -f <dump-location> --profile=$(cat .active-profile.txt) screenshot -D .

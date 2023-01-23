@@ -30,7 +30,7 @@
 1. Check out the [infosecstreams cheat.sheets!](https://github.com/infosecstreams/cheat.sheets) :)
 
 
-### notes for arch 
+### notes for Arch Linux
 
 ```bash
 cargo install fd-find # via rust and add ~/.cargo/bin/ to $PATH
@@ -44,7 +44,7 @@ ln -sf $(which fd) /sbin/fdfind
 
 ### Installing the shell widget
 
-If you want to the shell widget (hint: you do), add this line to your `.bashrc`_**-like**_ file:
+If you want to the shell widget (hint: you do), add this line to your `.bashrc` file:
 
 ```shell
 # bash
@@ -63,7 +63,7 @@ You should restart your shell session. Now when you press `ctrl+g` and you shoul
 
 1. Run `navi` :
 
-    `$ navi` or ... press `ctrl+g` if you installed the widget...!!!# cheat.sheets
+    `$ navi` or ... press `ctrl+g` if you installed the widget...!!!
 
 # Final Result : 
 ![](sheets.png)

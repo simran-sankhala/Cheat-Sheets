@@ -66,4 +66,4 @@ You should restart your shell session. Now when you press `ctrl+g` and you shoul
     `$ navi` or ... press `ctrl+g` if you installed the widget...!!!# cheat.sheets
 
 # Final Result : 
-![](final.png)
+![](sheets.png)

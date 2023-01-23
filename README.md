@@ -25,7 +25,7 @@
 
 1. Add the pentest cheat sheets by adding the repo to navi:
 
-    `$ navi repo add esp0xdeadbeef/cheat.sheets`
+    ```$ navi repo add simran-sankhala/Cheat-Sheets```
 
 1. Check out the [infosecstreams cheat.sheets!](https://github.com/infosecstreams/cheat.sheets) :)
 
